@@ -19,6 +19,16 @@
  */
 
 @theme inline {
+  --font-script: "Monsieur La Doulaise", cursive;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Karla", system-ui, sans-serif;
+  --color-sky: var(--sky);
+  --color-rose: var(--rose);
+  --color-burgundy: var(--burgundy);
+  --color-olive: var(--olive);
+  --color-lilac: var(--lilac);
+  --color-cream: var(--cream);
+  --color-parchment: var(--parchment);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,9 +72,19 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.25rem;
+
+  /* Wedding palette (from the mood board) */
+  --sky: oklch(0.83 0.058 249);
+  --rose: oklch(0.6 0.128 5);
+  --burgundy: oklch(0.35 0.106 25);
+  --olive: oklch(0.66 0.115 111);
+  --lilac: oklch(0.77 0.077 305);
+  --cream: oklch(0.91 0.052 96);
+  --parchment: oklch(0.965 0.019 92);
+
+  --background: var(--parchment);
+  --foreground: oklch(0.35 0.106 25);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
