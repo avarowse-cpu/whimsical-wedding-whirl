@@ -224,6 +224,56 @@
   animation: flutter 3.2s ease-in-out infinite;
 }
 
+@keyframes fly-around-left {
+  0% {
+    transform: translateY(0) translateX(0) rotate(-3deg);
+  }
+  20% {
+    transform: translateY(-28px) translateX(18px) rotate(4deg);
+  }
+  40% {
+    transform: translateY(-12px) translateX(-10px) rotate(-5deg);
+  }
+  60% {
+    transform: translateY(-34px) translateX(8px) rotate(2deg);
+  }
+  80% {
+    transform: translateY(-8px) translateX(-16px) rotate(-4deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(-3deg);
+  }
+}
+
+@keyframes fly-around-right {
+  0% {
+    transform: translateY(0) translateX(0) rotate(3deg);
+  }
+  25% {
+    transform: translateY(-26px) translateX(-14px) rotate(-4deg);
+  }
+  45% {
+    transform: translateY(-10px) translateX(12px) rotate(5deg);
+  }
+  65% {
+    transform: translateY(-32px) translateX(-8px) rotate(-2deg);
+  }
+  85% {
+    transform: translateY(-6px) translateX(16px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(3deg);
+  }
+}
+
+@utility animate-fly-around-left {
+  animation: fly-around-left 4.6s ease-in-out infinite;
+}
+
+@utility animate-fly-around-right {
+  animation: fly-around-right 4.8s ease-in-out infinite;
+}
+
 @utility animate-rise {
   animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
