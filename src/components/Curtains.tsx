@@ -111,9 +111,10 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
             <path d="M296 130 c8 12 20 12 28 0" />
             <path d="M310 142 c-3 8 2 14 8 13" />
           </svg>
-          <span className="font-display absolute inset-0 flex items-center justify-center text-[clamp(1.05rem,3.4vw,1.7rem)] uppercase tracking-[0.28em] text-burgundy">
+          <span className="font-display absolute left-[26%] right-[26%] top-[32.5%] flex h-[35%] items-center justify-center whitespace-nowrap text-[clamp(0.7rem,2.1vw,1.15rem)] uppercase tracking-[0.24em] text-burgundy">
             Draw the Curtains
           </span>
+
         </button>
       </div>
 
