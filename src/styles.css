@@ -233,3 +233,24 @@
   transform-origin: top center;
 }
 
+
+@keyframes paper-sway {
+  0%,
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+  33% {
+    transform: rotate(-0.7deg) translateX(-3px);
+  }
+  66% {
+    transform: rotate(0.5deg) translateX(2px);
+  }
+}
+
+@utility animate-paper-sway {
+  animation: paper-sway 5s steps(4, end) infinite;
+}
+
+@utility animate-paper-sway-alt {
+  animation: paper-sway 5.6s steps(4, end) infinite reverse;
+}

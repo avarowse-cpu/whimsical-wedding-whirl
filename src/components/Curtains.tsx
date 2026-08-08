@@ -32,7 +32,7 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
       {/* Scrapbook page behind the cut-outs */}
       <div className="absolute inset-0 bg-cream" />
       <div className="absolute inset-0 opacity-[0.5] [background-image:radial-gradient(color-mix(in_oklab,var(--olive)_22%,transparent)_1px,transparent_1px)] [background-size:6px_6px]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,color-mix(in_oklab,var(--blush)_45%,transparent),transparent_65%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,color-mix(in_oklab,var(--rose)_45%,transparent),transparent_65%)]" />
 
       {/* Torn-paper stage card */}
       <div className="absolute inset-[3vmin] border-[6px] border-dashed border-olive/25" />
