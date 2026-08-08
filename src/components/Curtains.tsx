@@ -72,64 +72,22 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
         }`}
       />
 
-      {/* Invitation to enter — engraved cartouche label */}
+      {/* Invitation to enter — a taped paper label */}
       <div
-        className={`absolute inset-x-0 bottom-[14vh] flex flex-col items-center px-6 text-center transition-opacity duration-300 ${
+        className={`absolute inset-x-0 bottom-[14vh] flex flex-col items-center gap-5 px-6 text-center transition-opacity duration-300 ${
           open ? "opacity-0" : "opacity-100"
         }`}
       >
+        <p className="label-caps text-olive/80">You are cordially summoned</p>
         <button
           onClick={pull}
-          aria-label="Draw the curtains"
-          className="group relative cursor-pointer px-2 py-2 transition-transform duration-300 hover:scale-[1.03]"
+          className="group -rotate-2 cursor-pointer border-2 border-olive/40 bg-cream px-9 py-3 shadow-[5px_6px_0_color-mix(in_oklab,var(--olive)_40%,transparent)] transition-transform duration-200 hover:rotate-0 hover:translate-y-[2px]"
         >
-
-          <svg
-            viewBox="0 0 620 190"
-            aria-hidden="true"
-            className="w-[76vw] max-w-[560px] text-burgundy/85"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          >
-            {/* inner panel */}
-            <path d="M175 62 h270 a14 14 0 0 1 14 14 v38 a14 14 0 0 1 -14 14 H175 a14 14 0 0 1 -14 -14 V76 a14 14 0 0 1 14 -14 z" />
-            {/* outer scalloped cartouche */}
-            <path d="M161 78 c-14 -18 -34 -30 -58 -26 c-22 4 -34 20 -30 36 c3 13 16 20 27 16 c10 -4 13 -16 6 -22 c-6 -5 -15 -3 -17 4" />
-            <path d="M161 112 c-14 18 -34 30 -58 26 c-22 -4 -34 -20 -30 -36" />
-            <path d="M103 52 c-24 -6 -46 6 -52 26 c-7 22 8 44 32 48" />
-            <path d="M459 78 c14 -18 34 -30 58 -26 c22 4 34 20 30 36 c-3 13 -16 20 -27 16 c-10 -4 -13 -16 -6 -22 c6 -5 15 -3 17 4" />
-            <path d="M459 112 c14 18 34 30 58 26 c22 -4 34 -20 30 -36" />
-            <path d="M517 52 c24 -6 46 6 52 26 c7 22 -8 44 -32 48" />
-            {/* top crest */}
-            <path d="M290 62 c4 -14 -6 -22 -16 -20 c-9 2 -12 12 -6 17" />
-            <path d="M330 62 c-4 -14 6 -22 16 -20 c9 2 12 12 6 17" />
-            <path d="M296 60 c8 -12 20 -12 28 0" />
-            <path d="M310 48 c-3 -8 2 -14 8 -13" />
-            {/* bottom crest */}
-            <path d="M290 128 c4 14 -6 22 -16 20 c-9 -2 -12 -12 -6 -17" />
-            <path d="M330 128 c-4 14 6 22 16 20 c9 -2 12 -12 6 -17" />
-            <path d="M296 130 c8 12 20 12 28 0" />
-            <path d="M310 142 c-3 8 2 14 8 13" />
-            <text
-              x="310"
-              y="95"
-              textAnchor="middle"
-              dominantBaseline="central"
-              stroke="none"
-              fill="currentColor"
-              className="font-display"
-              fontSize="27"
-              letterSpacing="5.5"
-            >
-              DRAW THE CURTAINS
-            </text>
-          </svg>
+          <span className="font-script block text-5xl leading-none text-burgundy sm:text-6xl">
+            Draw the curtains
+          </span>
         </button>
       </div>
-
-
     </div>
   );
 }
