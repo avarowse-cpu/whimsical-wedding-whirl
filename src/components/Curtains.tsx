@@ -61,14 +61,14 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
         src={bird}
         alt="A bluebird pulling the curtain open"
         className={`absolute top-[24%] left-[22vw] w-[18vw] min-w-[132px] max-w-[260px] drop-shadow-[4px_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)] transition-transform ${paperEase} ${
-          open ? "-scale-x-100 -translate-x-[60vw] -translate-y-[16vh]" : "animate-fly-around-left"
+          open ? "-scale-x-100 -translate-x-[60vw] -translate-y-[16vh]" : "animate-bird-tilt-left"
         }`}
       />
       <img
         src={bird}
         alt="A bluebird pulling the curtain open"
         className={`absolute top-[24%] right-[22vw] w-[18vw] min-w-[132px] max-w-[260px] drop-shadow-[-4px_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)] transition-transform ${paperEase} ${
-          open ? "translate-x-[60vw] -translate-y-[16vh]" : "animate-fly-around-right"
+          open ? "translate-x-[60vw] -translate-y-[16vh]" : "animate-bird-tilt-right"
         }`}
       />
 
