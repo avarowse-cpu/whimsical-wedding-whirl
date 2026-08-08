@@ -36,7 +36,7 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
         aria-hidden="true"
         width={768}
         height={1536}
-        className={`absolute top-0 left-0 h-full w-[62vw] max-w-[720px] origin-top-left object-cover object-right transition-transform duration-[2200ms] ease-[cubic-bezier(0.65,0,0.35,1)] ${
+        className={`absolute top-0 left-0 h-full w-[62vw] max-w-[720px] origin-top-left object-cover object-left transition-transform duration-[2200ms] ease-[cubic-bezier(0.65,0,0.35,1)] ${
           open ? "-translate-x-[105%]" : "translate-x-0"
         }`}
       />
@@ -47,7 +47,7 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
         aria-hidden="true"
         width={768}
         height={1536}
-        className={`absolute top-0 right-0 h-full w-[62vw] max-w-[720px] origin-top-right scale-x-[-1] object-cover object-right transition-transform duration-[2200ms] ease-[cubic-bezier(0.65,0,0.35,1)] ${
+        className={`absolute top-0 right-0 h-full w-[62vw] max-w-[720px] origin-top-right scale-x-[-1] object-cover object-left transition-transform duration-[2200ms] ease-[cubic-bezier(0.65,0,0.35,1)] ${
           open ? "-translate-x-[105%]" : "translate-x-0"
         }`}
       />
