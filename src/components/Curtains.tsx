@@ -110,13 +110,23 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
             <path d="M330 128 c-4 14 6 22 16 20 c9 -2 12 -12 6 -17" />
             <path d="M296 130 c8 12 20 12 28 0" />
             <path d="M310 142 c-3 8 2 14 8 13" />
+            <text
+              x="310"
+              y="95"
+              textAnchor="middle"
+              dominantBaseline="central"
+              stroke="none"
+              fill="currentColor"
+              className="font-display"
+              fontSize="27"
+              letterSpacing="5.5"
+            >
+              DRAW THE CURTAINS
+            </text>
           </svg>
-          <span className="font-display absolute left-[26%] right-[26%] top-[32.5%] flex h-[35%] items-center justify-center whitespace-nowrap text-[clamp(0.7rem,2.1vw,1.15rem)] uppercase tracking-[0.24em] text-burgundy">
-            Draw the Curtains
-          </span>
-
         </button>
       </div>
+
 
     </div>
   );
