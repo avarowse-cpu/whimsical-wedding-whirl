@@ -226,22 +226,22 @@
 
 @keyframes fly-around-left {
   0% {
-    transform: translateY(0) translateX(0) rotate(-3deg);
+    transform: scaleX(-1) translateY(0) translateX(0) rotate(-3deg);
   }
   20% {
-    transform: translateY(-28px) translateX(18px) rotate(4deg);
+    transform: scaleX(-1) translateY(-28px) translateX(18px) rotate(4deg);
   }
   40% {
-    transform: translateY(-12px) translateX(-10px) rotate(-5deg);
+    transform: scaleX(-1) translateY(-12px) translateX(-10px) rotate(-5deg);
   }
   60% {
-    transform: translateY(-34px) translateX(8px) rotate(2deg);
+    transform: scaleX(-1) translateY(-34px) translateX(8px) rotate(2deg);
   }
   80% {
-    transform: translateY(-8px) translateX(-16px) rotate(-4deg);
+    transform: scaleX(-1) translateY(-8px) translateX(-16px) rotate(-4deg);
   }
   100% {
-    transform: translateY(0) translateX(0) rotate(-3deg);
+    transform: scaleX(-1) translateY(0) translateX(0) rotate(-3deg);
   }
 }
 
