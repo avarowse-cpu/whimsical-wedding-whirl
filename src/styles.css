@@ -224,46 +224,6 @@
   animation: flutter 3.2s ease-in-out infinite;
 }
 
-@keyframes bird-tilt-left {
-  0%,
-  100% {
-    transform: scaleX(-1) translateY(0) translateX(0) rotate(-2deg);
-  }
-  25% {
-    transform: scaleX(-1) translateY(-6px) translateX(4px) rotate(2deg);
-  }
-  50% {
-    transform: scaleX(-1) translateY(-3px) translateX(-3px) rotate(0deg);
-  }
-  75% {
-    transform: scaleX(-1) translateY(-7px) translateX(2px) rotate(1deg);
-  }
-}
-
-@keyframes bird-tilt-right {
-  0%,
-  100% {
-    transform: translateY(0) translateX(0) rotate(2deg);
-  }
-  25% {
-    transform: translateY(-5px) translateX(-4px) rotate(-1deg);
-  }
-  50% {
-    transform: translateY(-3px) translateX(3px) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-6px) translateX(-2px) rotate(2deg);
-  }
-}
-
-@utility animate-bird-tilt-left {
-  animation: bird-tilt-left 5.5s ease-in-out infinite;
-}
-
-@utility animate-bird-tilt-right {
-  animation: bird-tilt-right 5.8s ease-in-out infinite;
-}
-
 @utility animate-rise {
   animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
