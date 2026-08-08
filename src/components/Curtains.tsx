@@ -1,10 +1,11 @@
 import { useState } from "react";
-import curtain from "@/assets/curtain-left.png";
+import curtainLeft from "@/assets/curtain-panel-left.png";
+import curtainRight from "@/assets/curtain-panel-right.png";
 import bird from "@/assets/bluebird.png";
 
 /**
- * The entrance: two bluebirds pull the velvet curtains apart to reveal the
- * save-the-date behind them.
+ * The entrance: paper cut-out curtains, animated stop-motion style (stepped
+ * easing, slight paper wobble) as two bluebirds tug them open.
  */
 export function Curtains({ onOpened }: { onOpened: () => void }) {
   const [open, setOpen] = useState(false);
@@ -14,41 +15,44 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
     if (open) return;
     setOpen(true);
     onOpened();
-    window.setTimeout(() => setGone(true), 2600);
+    window.setTimeout(() => setGone(true), 3200);
   }
 
   if (gone) return null;
 
+  // stop-motion: stepped easing so the paper "snaps" frame to frame
+  const paperEase = "duration-[2600ms] ease-[cubic-bezier(0.33,0,0.2,1)]";
+
   return (
     <div
-      className={`fixed inset-0 z-50 overflow-hidden transition-opacity duration-700 ${
-        open ? "pointer-events-none delay-[1900ms] opacity-0" : "opacity-100"
+      className={`fixed inset-0 z-50 overflow-hidden transition-opacity duration-500 ${
+        open ? "pointer-events-none delay-[2300ms] opacity-0" : "opacity-100"
       }`}
     >
-      {/* Stage glow behind the curtains */}
-      <div className="absolute inset-0 bg-burgundy/95" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,color-mix(in_oklab,var(--cream)_55%,transparent),transparent_62%)]" />
+      {/* Scrapbook page behind the cut-outs */}
+      <div className="absolute inset-0 bg-cream" />
+      <div className="absolute inset-0 opacity-[0.5] [background-image:radial-gradient(color-mix(in_oklab,var(--olive)_22%,transparent)_1px,transparent_1px)] [background-size:6px_6px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,color-mix(in_oklab,var(--rose)_45%,transparent),transparent_65%)]" />
 
-      {/* Left curtain */}
+      {/* Torn-paper stage card */}
+      <div className="absolute inset-[3vmin] border-[6px] border-dashed border-olive/25" />
+
+      {/* Left cut-out panel */}
       <img
-        src={curtain}
+        src={curtainLeft}
         alt=""
         aria-hidden="true"
-        width={768}
-        height={1536}
-        className={`absolute top-0 left-0 h-full w-[62vw] max-w-[720px] origin-top-left object-cover object-left transition-transform duration-[2200ms] ease-[cubic-bezier(0.65,0,0.35,1)] ${
-          open ? "-translate-x-[105%]" : "translate-x-0"
+        className={`absolute top-0 left-0 h-[102%] w-[56vw] origin-top-left object-cover object-right drop-shadow-[6px_10px_0_color-mix(in_oklab,var(--olive)_35%,transparent)] transition-transform ${paperEase} ${
+          open ? "-translate-x-[62%] -rotate-6" : "animate-paper-sway"
         }`}
       />
-      {/* Right curtain (mirrored) */}
+      {/* Right cut-out panel */}
       <img
-        src={curtain}
+        src={curtainRight}
         alt=""
         aria-hidden="true"
-        width={768}
-        height={1536}
-        className={`absolute top-0 right-0 h-full w-[62vw] max-w-[720px] origin-top-right scale-x-[-1] object-cover object-left transition-transform duration-[2200ms] ease-[cubic-bezier(0.65,0,0.35,1)] ${
-          open ? "-translate-x-[105%]" : "translate-x-0"
+        className={`absolute top-0 right-0 h-[102%] w-[56vw] origin-top-right object-cover object-left drop-shadow-[-6px_10px_0_color-mix(in_oklab,var(--olive)_35%,transparent)] transition-transform ${paperEase} ${
+          open ? "translate-x-[62%] rotate-6" : "animate-paper-sway-alt"
         }`}
       />
 
@@ -56,34 +60,30 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
       <img
         src={bird}
         alt="A bluebird pulling the curtain open"
-        width={1024}
-        height={768}
-        className={`absolute top-[26%] left-[26vw] w-[16vw] min-w-[110px] max-w-[210px] scale-x-[-1] drop-shadow-[0_18px_24px_rgba(0,0,0,0.35)] transition-all duration-[2200ms] ease-[cubic-bezier(0.65,0,0.35,1)] ${
-          open ? "-translate-x-[70vw] -translate-y-[18vh] opacity-0" : "animate-flutter"
+        className={`absolute top-[24%] left-[24vw] w-[15vw] min-w-[104px] max-w-[190px] -scale-x-100 drop-shadow-[4px_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)] transition-transform ${paperEase} ${
+          open ? "-translate-x-[60vw] -translate-y-[16vh]" : "animate-flutter"
         }`}
       />
       <img
         src={bird}
         alt="A bluebird pulling the curtain open"
-        width={1024}
-        height={768}
-        className={`absolute top-[26%] right-[26vw] w-[16vw] min-w-[110px] max-w-[210px] drop-shadow-[0_18px_24px_rgba(0,0,0,0.35)] transition-all duration-[2200ms] ease-[cubic-bezier(0.65,0,0.35,1)] ${
-          open ? "translate-x-[70vw] -translate-y-[18vh] opacity-0" : "animate-flutter"
+        className={`absolute top-[24%] right-[24vw] w-[15vw] min-w-[104px] max-w-[190px] drop-shadow-[-4px_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)] transition-transform ${paperEase} ${
+          open ? "translate-x-[60vw] -translate-y-[16vh]" : "animate-flutter"
         }`}
       />
 
-      {/* Invitation to enter */}
+      {/* Invitation to enter — a taped paper label */}
       <div
-        className={`absolute inset-x-0 bottom-[16vh] flex flex-col items-center gap-6 px-6 text-center transition-opacity duration-500 ${
+        className={`absolute inset-x-0 bottom-[14vh] flex flex-col items-center gap-5 px-6 text-center transition-opacity duration-300 ${
           open ? "opacity-0" : "opacity-100"
         }`}
       >
-        <p className="label-caps text-cream/80">You are cordially summoned</p>
+        <p className="label-caps text-olive/80">You are cordially summoned</p>
         <button
           onClick={pull}
-          className="group cursor-pointer border border-cream/40 bg-cream/10 px-10 py-4 backdrop-blur-sm transition-colors duration-300 hover:bg-cream/20"
+          className="group -rotate-2 cursor-pointer border-2 border-olive/40 bg-cream px-9 py-3 shadow-[5px_6px_0_color-mix(in_oklab,var(--olive)_40%,transparent)] transition-transform duration-200 hover:rotate-0 hover:translate-y-[2px]"
         >
-          <span className="font-script block text-5xl leading-none text-cream sm:text-6xl">
+          <span className="font-script block text-5xl leading-none text-burgundy sm:text-6xl">
             Draw the curtains
           </span>
         </button>
