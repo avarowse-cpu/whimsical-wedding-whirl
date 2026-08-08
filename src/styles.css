@@ -248,9 +248,9 @@
 }
 
 @utility animate-paper-sway {
-  animation: paper-sway 5s steps(4, end) infinite;
+  animation: paper-sway 6s ease-in-out infinite;
 }
 
 @utility animate-paper-sway-alt {
-  animation: paper-sway 5.6s steps(4, end) infinite reverse;
+  animation: paper-sway 6.8s ease-in-out infinite reverse;
 }

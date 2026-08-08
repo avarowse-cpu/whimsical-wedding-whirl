@@ -15,18 +15,18 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
     if (open) return;
     setOpen(true);
     onOpened();
-    window.setTimeout(() => setGone(true), 2400);
+    window.setTimeout(() => setGone(true), 3200);
   }
 
   if (gone) return null;
 
   // stop-motion: stepped easing so the paper "snaps" frame to frame
-  const paperEase = "duration-[1800ms] ease-[steps(9,end)]";
+  const paperEase = "duration-[2600ms] ease-[cubic-bezier(0.33,0,0.2,1)]";
 
   return (
     <div
       className={`fixed inset-0 z-50 overflow-hidden transition-opacity duration-500 ${
-        open ? "pointer-events-none delay-[1700ms] opacity-0" : "opacity-100"
+        open ? "pointer-events-none delay-[2300ms] opacity-0" : "opacity-100"
       }`}
     >
       {/* Scrapbook page behind the cut-outs */}
