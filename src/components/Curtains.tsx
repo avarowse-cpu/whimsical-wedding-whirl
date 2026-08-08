@@ -80,8 +80,10 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
       >
         <button
           onClick={pull}
+          aria-label="Draw the curtains"
           className="group relative cursor-pointer px-2 py-2 transition-transform duration-300 hover:scale-[1.03]"
         >
+
           <svg
             viewBox="0 0 620 190"
             aria-hidden="true"
