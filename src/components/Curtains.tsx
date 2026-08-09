@@ -2,7 +2,7 @@ import { useState } from "react";
 import curtainLeft from "@/assets/curtain-panel-left.png";
 import curtainRight from "@/assets/curtain-panel-right.png";
 import bird from "@/assets/bluebird.png";
-import ribbonBanner from "@/assets/ribbon-banner.png.asset.json";
+import ribbonBanner from "@/assets/ribbon-banner-transparent.png.asset.json";
 
 
 /**
