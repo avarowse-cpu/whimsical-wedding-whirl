@@ -91,15 +91,15 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
           />
           {/* Curved text following the ribbon's arc */}
           <svg
-            viewBox="0 0 800 120"
+            viewBox="0 0 800 100"
             preserveAspectRatio="xMidYMid meet"
-            className="absolute top-[28%] left-0 h-[44%] w-full overflow-visible"
+            className="absolute top-[40%] left-0 h-[26%] w-full overflow-visible"
             aria-hidden="true"
           >
             <defs>
               <path
                 id="ribbonCurve"
-                d="M 100 55 Q 400 95 700 55"
+                d="M 110 35 Q 400 72 690 35"
                 fill="none"
               />
             </defs>
@@ -108,7 +108,7 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
               textAnchor="middle"
               dominantBaseline="middle"
               style={{
-                fontSize: "46px",
+                fontSize: "48px",
                 filter:
                   "drop-shadow(0px 2px 2px color-mix(in oklab, var(--burgundy) 60%, transparent))",
               }}
