@@ -93,13 +93,13 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
           <svg
             viewBox="0 0 800 100"
             preserveAspectRatio="xMidYMid meet"
-            className="absolute top-[40%] left-0 h-[26%] w-full overflow-visible"
+            className="absolute top-[30%] left-0 h-[28%] w-full overflow-visible"
             aria-hidden="true"
           >
             <defs>
               <path
                 id="ribbonCurve"
-                d="M 110 35 Q 400 72 690 35"
+                d="M 110 45 Q 400 75 690 45"
                 fill="none"
               />
             </defs>
@@ -108,7 +108,7 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
               textAnchor="middle"
               dominantBaseline="middle"
               style={{
-                fontSize: "48px",
+                fontSize: "50px",
                 filter:
                   "drop-shadow(0px 2px 2px color-mix(in oklab, var(--burgundy) 60%, transparent))",
               }}
