@@ -2,6 +2,8 @@ import { useState } from "react";
 import curtainLeft from "@/assets/curtain-panel-left.png";
 import curtainRight from "@/assets/curtain-panel-right.png";
 import bird from "@/assets/bluebird.png";
+import ribbonBanner from "@/assets/ribbon-banner-transparent.png.asset.json";
+
 
 /**
  * The entrance: paper cut-out curtains, animated stop-motion style (stepped
@@ -72,22 +74,20 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
         }`}
       />
 
-      {/* Invitation to enter — a taped paper label */}
-      <div
-        className={`absolute inset-x-0 bottom-[14vh] flex flex-col items-center gap-5 px-6 text-center transition-opacity duration-300 ${
-          open ? "opacity-0" : "opacity-100"
+      {/* Ribbon banner — click to enter */}
+      <button
+        onClick={pull}
+        aria-label="Draw the curtains"
+        className={`absolute inset-x-0 bottom-[12vh] mx-auto flex w-[85vw] max-w-2xl cursor-pointer items-center justify-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
+          open ? "pointer-events-none opacity-0" : "opacity-100"
         }`}
       >
-        <p className="label-caps text-olive/80">You are cordially summoned</p>
-        <button
-          onClick={pull}
-          className="group -rotate-2 cursor-pointer border-2 border-olive/40 bg-cream px-9 py-3 shadow-[5px_6px_0_color-mix(in_oklab,var(--olive)_40%,transparent)] transition-transform duration-200 hover:rotate-0 hover:translate-y-[2px]"
-        >
-          <span className="font-script block text-5xl leading-none text-burgundy sm:text-6xl">
-            Draw the curtains
-          </span>
-        </button>
-      </div>
+        <img
+          src={ribbonBanner.url}
+          alt="Draw the curtains"
+          className="w-full drop-shadow-[0_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)]"
+        />
+      </button>
     </div>
   );
 }
