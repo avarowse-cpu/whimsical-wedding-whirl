@@ -89,9 +89,35 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
             aria-hidden="true"
             className="w-full drop-shadow-[0_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)]"
           />
-          <span className="font-script absolute top-[30%] left-0 right-0 flex items-center justify-center text-[clamp(1.5rem,5vw,2.5rem)] leading-none text-cream drop-shadow-[0_2px_2px_color-mix(in_oklab,var(--burgundy)_60%,transparent)]">
-            Draw the curtains
-          </span>
+          {/* Curved text following the ribbon's arc */}
+          <svg
+            viewBox="0 0 800 100"
+            preserveAspectRatio="xMidYMid meet"
+            className="absolute top-[15%] left-0 h-[28%] w-full overflow-visible"
+            aria-hidden="true"
+          >
+            <defs>
+              <path
+                id="ribbonCurve"
+                d="M 110 45 Q 400 75 690 45"
+                fill="none"
+              />
+            </defs>
+            <text
+              className="font-script fill-cream"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              style={{
+                fontSize: "50px",
+                filter:
+                  "drop-shadow(0px 2px 2px color-mix(in oklab, var(--burgundy) 60%, transparent))",
+              }}
+            >
+              <textPath href="#ribbonCurve" startOffset="50%">
+                Draw the curtains
+              </textPath>
+            </text>
+          </svg>
         </div>
       </button>
     </div>
