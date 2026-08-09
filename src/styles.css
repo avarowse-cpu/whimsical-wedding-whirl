@@ -268,3 +268,31 @@
 @utility animate-paper-sway-alt {
   animation: paper-sway 6.8s ease-in-out infinite reverse;
 }
+/* =========================================================
+   FIX FOR CURTAIN & RIBBON IMAGE CROPPING
+   ========================================================= */
+
+/* Fixes curtain graphics from getting cropped at top/bottom */
+.curtain-panel, 
+[class*="curtain"], 
+.curtain-panel img {
+  object-fit: contain !important;
+  object-position: top center !important;
+  max-height: 100vh !important;
+}
+
+/* Ensures the birds & ribbons stay anchored inside viewable screen */
+.bird, 
+[class*="bird"], 
+[class*="ribbon"] {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Prevents vertical scrolling cutoffs on small monitors */
+.wedding-stage,
+main {
+  min-height: 100vh;
+  overflow-y: auto;
+}
