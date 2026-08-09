@@ -89,7 +89,7 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
             aria-hidden="true"
             className="w-full drop-shadow-[0_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)]"
           />
-          <span className="font-script absolute inset-0 flex items-center justify-center pt-2 text-[clamp(1.5rem,5vw,2.5rem)] leading-none text-cream drop-shadow-[0_1px_0_var(--olive)]">
+          <span className="font-script absolute top-[30%] left-0 right-0 flex items-center justify-center text-[clamp(1.5rem,5vw,2.5rem)] leading-none text-cream drop-shadow-[0_2px_2px_color-mix(in_oklab,var(--burgundy)_60%,transparent)]">
             Draw the curtains
           </span>
         </div>
