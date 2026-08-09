@@ -93,7 +93,7 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
           <svg
             viewBox="0 0 800 100"
             preserveAspectRatio="xMidYMid meet"
-            className="absolute top-[30%] left-0 h-[28%] w-full overflow-visible"
+            className="absolute top-[15%] left-0 h-[28%] w-full overflow-visible"
             aria-hidden="true"
           >
             <defs>
