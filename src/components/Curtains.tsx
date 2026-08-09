@@ -37,40 +37,40 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
       {/* Torn-paper stage card */}
       <div className="absolute inset-[3vmin] border-[6px] border-dashed border-olive/25" />
 
-      {/* Left curtain panel */}
+      {/* Left curtain panel - Covers left edge completely */}
       <img
         src={curtainLeft}
         alt=""
         aria-hidden="true"
-        className={`absolute top-0 left-0 h-full max-h-screen w-[52vw] origin-top-left object-contain object-top drop-shadow-[6px_10px_0_color-mix(in_oklab,var(--olive)_35%,transparent)] transition-transform ${paperEase} ${
-          open ? "-translate-x-[62%] -rotate-6" : "animate-paper-sway"
+        className={`absolute top-0 left-0 h-full w-[58vw] min-w-[50vw] origin-top-left object-cover object-left-top drop-shadow-[6px_10px_0_color-mix(in_oklab,var(--olive)_35%,transparent)] transition-transform ${paperEase} ${
+          open ? "-translate-x-[65%] -rotate-6" : "animate-paper-sway"
         }`}
       />
 
-      {/* Right curtain panel */}
+      {/* Right curtain panel - Covers right edge completely */}
       <img
         src={curtainRight}
         alt=""
         aria-hidden="true"
-        className={`absolute top-0 right-0 h-full max-h-screen w-[52vw] origin-top-right object-contain object-top drop-shadow-[-6px_10px_0_color-mix(in_oklab,var(--olive)_35%,transparent)] transition-transform ${paperEase} ${
-          open ? "translate-x-[62%] rotate-6" : "animate-paper-sway-alt"
+        className={`absolute top-0 right-0 h-full w-[58vw] min-w-[50vw] origin-top-right object-cover object-right-top drop-shadow-[-6px_10px_0_color-mix(in_oklab,var(--olive)_35%,transparent)] transition-transform ${paperEase} ${
+          open ? "translate-x-[65%] rotate-6" : "animate-paper-sway-alt"
         }`}
       />
 
-      {/* Left Bluebird (Larger & anchored to left side of ribbon) */}
+      {/* Left Bluebird */}
       <img
         src={bird}
         alt="A bluebird pulling the left curtain open"
-        className={`absolute top-[18%] left-[10vw] z-20 w-[18vw] min-w-[130px] max-w-[240px] -scale-x-100 drop-shadow-[4px_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)] transition-transform ${paperEase} ${
+        className={`absolute top-[22%] left-[12vw] z-20 w-[18vw] min-w-[130px] max-w-[220px] -scale-x-100 drop-shadow-[4px_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)] transition-transform ${paperEase} ${
           open ? "-translate-x-[60vw] -translate-y-[16vh]" : "animate-flutter"
         }`}
       />
 
-      {/* Right Bluebird (Larger & anchored to right side of ribbon) */}
+      {/* Right Bluebird */}
       <img
         src={bird}
         alt="A bluebird pulling the right curtain open"
-        className={`absolute top-[18%] right-[10vw] z-20 w-[18vw] min-w-[130px] max-w-[240px] drop-shadow-[-4px_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)] transition-transform ${paperEase} ${
+        className={`absolute top-[22%] right-[12vw] z-20 w-[18vw] min-w-[130px] max-w-[220px] drop-shadow-[-4px_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)] transition-transform ${paperEase} ${
           open ? "translate-x-[60vw] -translate-y-[16vh]" : "animate-flutter"
         }`}
       />
@@ -79,7 +79,7 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
       <button
         onClick={pull}
         aria-label="Draw the curtains"
-        className={`absolute inset-x-0 top-[22%] z-30 mx-auto flex w-[85vw] max-w-2xl cursor-pointer items-center justify-center transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] ${
+        className={`absolute inset-x-0 top-[28%] z-30 mx-auto flex w-[85vw] max-w-2xl cursor-pointer items-center justify-center transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] ${
           open ? "pointer-events-none opacity-0" : "opacity-100"
         }`}
       >
