@@ -78,15 +78,21 @@ export function Curtains({ onOpened }: { onOpened: () => void }) {
       <button
         onClick={pull}
         aria-label="Draw the curtains"
-        className={`absolute inset-x-0 bottom-[12vh] mx-auto flex w-[85vw] max-w-2xl cursor-pointer items-center justify-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
+        className={`absolute inset-x-0 bottom-[3vh] mx-auto flex w-[85vw] max-w-2xl cursor-pointer items-center justify-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
           open ? "pointer-events-none opacity-0" : "opacity-100"
         }`}
       >
-        <img
-          src={ribbonBanner.url}
-          alt="Draw the curtains"
-          className="w-full drop-shadow-[0_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)]"
-        />
+        <div className="animate-ribbon-hover relative w-full">
+          <img
+            src={ribbonBanner.url}
+            alt=""
+            aria-hidden="true"
+            className="w-full drop-shadow-[0_8px_0_color-mix(in_oklab,var(--olive)_30%,transparent)]"
+          />
+          <span className="font-script absolute inset-0 flex items-center justify-center pt-2 text-[clamp(1.5rem,5vw,2.5rem)] leading-none text-cream drop-shadow-[0_1px_0_var(--olive)]">
+            Draw the curtains
+          </span>
+        </div>
       </button>
     </div>
   );
