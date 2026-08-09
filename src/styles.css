@@ -199,6 +199,16 @@
   }
 }
 
+@keyframes ribbon-hover {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -222,6 +232,10 @@
 
 @utility animate-flutter {
   animation: flutter 3.2s ease-in-out infinite;
+}
+
+@utility animate-ribbon-hover {
+  animation: ribbon-hover 3.6s ease-in-out infinite;
 }
 
 @utility animate-rise {
